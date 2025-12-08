@@ -1,0 +1,311 @@
+/* ---------------------- */
+/* ESTILO GENERAL FUTURISTA */
+/* ---------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0d0f23, #000);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeDown 1s ease-out;
+}
+
+.header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #00d5ff;
+    text-shadow: 0 0 15px #00d5ff;
+}
+
+.subtitle {
+    color: #b8eaff;
+    opacity: 0.8;
+}
+
+/* Animación del header */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------- */
+/* CONTENEDOR GENERAL */
+/* ---------------------- */
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+/* Secciones */
+.demo-section {
+    margin: 60px 0;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.demo-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #66e0ff;
+    text-shadow: 0 0 10px #00c8ff;
+}
+
+/* Animación Fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------- */
+/* GRID GENERAL */
+/* ---------------------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+/* ---------------------- */
+/* BOXES */
+/* ---------------------- */
+
+.box {
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.box:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #00d5ff;
+}
+
+/* Bordes */
+.border-solid { border: 3px solid #00d5ff; }
+.border-dashed { border: 3px dashed #42ff9d; }
+.border-dotted { border: 3px dotted #ff5f5f; }
+.border-double { border: 5px double #b45bff; }
+.border-groove { border: 5px groove #3450ff; }
+.border-ridge { border: 5px ridge #1abc9c; }
+.border-inset { border: 5px inset #e67e22; }
+.border-outset { border: 5px outset #f39c12; }
+
+.border-top-only { border-top: 4px solid #00d5ff; }
+.border-bottom-only { border-bottom: 4px solid #42ff9d; }
+.border-left-only { border-left: 4px solid #ff5f5f; }
+.border-mixed {
+    border-top: 3px solid blue;
+    border-bottom: 3px solid red;
+}
+
+/* Border Radius */
+.radius-sm { border-radius: 5px; border: 2px solid #00d5ff; }
+.radius-md { border-radius: 15px; border: 2px solid #9b59b6; }
+.radius-lg { border-radius: 30px; border: 2px solid #ff5f5f; }
+.radius-pill { border-radius: 999px; border: 2px solid #42ff9d; }
+
+/* ---------------------- */
+/* FORMAS */
+/* ---------------------- */
+
+.shape {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #00d5ff, #6f00ff);
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00d5ff;
+}
+
+.circle { border-radius: 50%; }
+.rounded-square { border-radius: 25px; }
+.top-rounded { border-radius: 50px 50px 0 0; }
+.leaf { border-radius: 0 50% 0 50%; }
+
+/* ---------------------- */
+/* BOTONES */
+/* ---------------------- */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Orbitron';
+}
+
+.filled {
+    background: #00d5ff;
+    border: none;
+    color: #000;
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid #00d5ff;
+    color: #00d5ff;
+}
+
+.ghost {
+    background: rgba(255,255,255,0.1);
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00d5ff;
+}
+
+.border-grow:hover {
+    border: 3px solid #00ff9d;
+}
+
+.border-spin {
+    border: 3px solid #00d5ff;
+    transition: 0.4s;
+}
+.border-spin:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.slide-border {
+    position: relative;
+    overflow: hidden;
+}
+.slide-border::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #00d5ff;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease;
+}
+.slide-border:hover::before {
+    width: 100%;
+}
+
+/* ---------------------- */
+/* CARDS */
+/* ---------------------- */
+
+.cards-grid .card {
+    padding: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px #00d5ff;
+}
+
+.simple { border: 2px solid #00d5ff; }
+.thick { border: 6px solid #b45bff; }
+.accent { border-left: 8px solid #42ff9d; }
+.dashed { border: 3px dashed #ff5f5f; }
+
+/* ---------------------- */
+/* AVATARES */
+/* ---------------------- */
+
+.avatars {
+    display: flex;
+    gap: 20px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #00d5ff;
+    box-shadow: 0 0 15px #00d5ff;
+    transition: 0.3s;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+/* ---------------------- */
+/* BORDES AVANZADOS */
+/* ---------------------- */
+
+.adv {
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Gradiente animado */
+.gradient-border {
+    border: 4px solid;
+    border-image: linear-gradient(45deg, #00d5ff, #ff5f5f, #42ff9d) 1;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #00d5ff; }
+    100% { box-shadow: 0 0 25px #ff5f5f; }
+}
+
+/* Glow puro */
+.glow-border {
+    border: 3px solid #00d5ff;
+    box-shadow: 0 0 25px #00d5ff;
+}
+
+/* Animado con movimiento */
+.animated-border {
+    position: relative;
+    border: 3px solid transparent;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(90deg, #00d5ff, #ff5f5f, #42ff9d) border-box;
+    animation: borderMove 4s linear infinite;
+}
+
+@keyframes borderMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+    opacity: 0.7;
+}
